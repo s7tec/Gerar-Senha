@@ -15,7 +15,7 @@ import string
 
 
 while True:
-    print("\nGerador de senha")
+    print("\nGerador de senha"  )
     print("1 - Gerar senha")
     print("0 - Sair")
 
@@ -34,7 +34,6 @@ while True:
         senha = ''.join(senha)
         print(senha)
     elif opcao == "0":
-        print("")
         print("Encerrando o programa. Até logo!")
         break
     else:
