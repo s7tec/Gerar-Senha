@@ -1,10 +1,11 @@
 import secrets
 import string 
 
-letras = string.ascii_letters
+letrasMi = string.ascii_lowercase
+letrasMa = string.ascii_uppercase
 numbers = string.digits 
 especial = string.punctuation
-
+letras = letrasMi + letrasMa
 while True:
     
     print("\nGerador de senha" )
@@ -16,31 +17,72 @@ while True:
     if option_one == "1":
         size = int(input("Escolha o tamanho da senha: "))
 
-        option_two = input("Escolha caracteristicas para sua senha\n" 
-                    "1-Digitos + Letras\n"
-                    "2-Letras + Caractere Especial\n"
-                    "3-Todos os caracteres\n"
+        option_two = input("Escolha caracteristicas para sua senha\n"
+                    "Exemplo:24"
+                    "1-Todos os caracteres\n"
+                    "2-Letras\n"
+                    "3-Números\n"
+                    "4-Caractere Especial\n"
+                    "5-Letras Maiusculas\n"
+                    "6-Letras Minusculas\n"
                     "\nOpção: ")
+        
         if option_two == "1":
-            one_items = letras + numbers
-            one_senha = [secrets.choice(one_items)
+            items = numbers + letras + especial
+            senha = [secrets.choice(items)
                 for i in range (size)]
-            one_senha = ''.join(one_senha)
-            print(f"Sua senha gerada:\n{one_senha}")
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
         
-        elif option_two == "2":
-            two_items = letras + especial
-            two_senha = [secrets.choice(two_items)
+        elif option_two == "23" or option_two == "32":
+            items =  numbers + letras
+            senha = [secrets.choice(items)
                 for i in range (size)]
-            two_senha = ''.join(two_senha)
-            print(f"Sua senha gerada:\n{two_senha}")
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
+
+        elif option_two == "24" or option_two == "42":
+            items =  numbers + especial
+            senha = [secrets.choice(items)
+                for i in range (size)]
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
+
+        elif option_two == "35" or option_two == "53":
+            items =  numbers + letrasMa
+            senha = [secrets.choice(items)
+                for i in range (size)]
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
+
+        elif option_two == "36" or option_two == "63":
+            items =  numbers + letrasMi
+            senha = [secrets.choice(items)
+                for i in range (size)]
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
+
+        elif option_two == "46" or option_two == "64":
+            items =  especial + letrasMi
+            senha = [secrets.choice(items)
+                for i in range (size)]
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
+
+        elif option_two == "46" or option_two == "64":
+            items =  numbers + letrasMi
+            senha = [secrets.choice(items)
+                for i in range (size)]
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
         
-        elif option_two == "3":
-            three_items = letras + numbers + especial
-            three_senha = [secrets.choice(three_items)
+        elif option_two == "345" or option_two == "435" or option_two == "435":
+            items =  numbers + letrasMa + especial
+            senha = [secrets.choice(items)
                 for i in range (size)]
-            three_senha = ''.join(three_senha)
-            print(f"Sua senha gerada:\n{three_senha}")
+            senha = ''.join(senha)
+            print(f"Sua senha gerada:\n{senha}")
+
         else:
             print("Opção inválida, tente novamente!")
         
